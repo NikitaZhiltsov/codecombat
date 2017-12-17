@@ -1,0 +1,22 @@
+# Ещё один сундук на поле ждет героя!
+# Атакуй сундук, чтобы взломать его.
+# Некоторые манчкины не будут спокойно ждать, пока ты атакуешь его!
+# Защищай себя, если манчкин подберётся слишком близко.
+
+while True:
+    enemy = hero.findNearestEnemy()
+    distance = hero.distanceTo(enemy)
+    if hero.isReady("cleave"):
+        # Приоритет способности `cleave`, если она готова:
+        hero.cleave(enemy)
+        pass
+    elif distance < 5:
+        # Атакуй ближайшего манчкина, который подберётся близко:
+        hero.attack(enemy)
+        pass
+    else:
+        # В противном случае, пытайтся взломать сундук.
+        # Use the name of the chest to attack: "Chest".
+        hero.attack("Chest")
+        pass
+    
