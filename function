@@ -1,0 +1,16 @@
+                                                        # Определение функции с именем `findAndAttackEnemy`
+def findAndAttackEnemy():                               #объявление переменной:
+    enemy = hero.findNearestEnemy()                     #реакция на врага - использование готовой функции findNearestEnemy() ОБЪЕКТОМ hero
+    if enemy:                                           #если враг появился
+        hero.attack(enemy)                              #использование готовой функции attack с переданным параметром enemy объектом hero 
+
+
+while True:
+    # Теперь ты можешь патрулировать деревню, используя `findAndAttackEnemy`
+    hero.moveXY(35, 34)
+    findAndAttackEnemy()
+    
+    # Теперь иди к правому входу.
+    hero.moveXY(60, 35)
+    # Используй `findAndAttackEnemy`
+    findAndAttackEnemy()
