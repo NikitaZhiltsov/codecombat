@@ -1,0 +1,13 @@
+# Используй новую способность `cleave` как можно чаще.
+
+hero.moveXY(23, 23)
+while True:
+    enemy = hero.findNearestEnemy()
+    if hero.isReady("cleave"):
+        # Руби врагов!
+        hero.cleave(enemy)
+        pass
+    else:
+        # Иначе (если `cleave` не готов) просто атакуй.
+        hero.attack(enemy)
+        pass
