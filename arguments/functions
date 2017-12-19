@@ -1,0 +1,24 @@
+# Огры на подходе!
+# Используй функцию `checkAndAttack`, чтобы сделать код более читаемым.
+
+# Эта функция имеет параметр.
+# Параметр - способ передать данные в функцию.
+def checkAndAttack(target):
+    # Параметр `target` - это просто переменная!
+    # В него передаётся значение аргумента при вызове функции.
+    if target:
+        hero.attack(target)
+    hero.moveXY(43, 34)
+
+while True:
+    hero.moveXY(58, 52)
+    topEnemy = hero.findNearestEnemy()
+    checkAndAttack(topEnemy)
+
+    # Иди к нижней отметке Х.
+    hero.moveXY(58, 16)
+    # Создай переменную `bottomEnemy` и найди ближайшего врага.
+    bottomEnemy = hero.findNearestEnemy()
+    
+    # Используй функцию `checkAndAttack` с аргументом `bottomEnemy`.
+    checkAndAttack(bottomEnemy)
