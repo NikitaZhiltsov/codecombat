@@ -1,4 +1,4 @@
 # codecombat
 Сodecombat learning Python
 https://codecombat.com
-Interesting and usefull code
+Some code from a very funny game
